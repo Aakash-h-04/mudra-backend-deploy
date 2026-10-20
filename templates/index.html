@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Bharatiya Natya Mudra Recognition
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>
+            Bharatiya Natya Mudra Recognition
+        </h1>
+
+        <p>
+            AI-powered classical hand gesture recognition
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================================================= -->
+        <!-- LIVE CAMERA -->
+        <!-- ================================================= -->
+
+        <section class="card">
+
+            <h2>
+                📷 Live Camera
+            </h2>
+
+            <div class="camera-container">
+
+                <video
+                    id="video"
+                    autoplay
+                    playsinline
+                ></video>
+
+                <canvas
+                    id="canvas"
+                ></canvas>
+
+            </div>
+
+
+            <div class="prediction">
+
+                <div id="liveMudra">
+                    Show a mudra
+                </div>
+
+                <div id="liveConfidence">
+                    --
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- IMAGE UPLOAD -->
+        <!-- ================================================= -->
+
+        <section class="card">
+
+            <h2>
+                🖼️ Image Prediction
+            </h2>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+            >
+
+            <button
+                id="submitButton"
+            >
+                Submit
+            </button>
+
+
+            <div
+                id="imagePreviewContainer"
+            >
+
+                <img
+                    id="imagePreview"
+                    alt="Preview"
+                >
+
+            </div>
+
+
+            <div class="prediction">
+
+                <div id="uploadMudra">
+                    --
+                </div>
+
+                <div id="uploadConfidence">
+                    --
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+
+    <script type="module" src="/static/script.js"></script>
+
+</body>
+
+</html>
